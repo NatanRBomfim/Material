@@ -54,6 +54,98 @@
             margin: 0;
             width: 50px;
         }
+
+        .flex-container5 {
+            justify-content: center;
+            align-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .flex-container5 div {
+            width: 170px;
+        }
+
+        .flex-container6 {
+            justify-content: flex-end;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            /*flex-direction: row;*/
+        }
+
+        .flex-container6 div {
+            background-color: yellow;
+            width: 50px;
+            height: 40px;
+        }
+
+        .flex-container6 .div2 {
+            flex-basis: 100px;
+        }
+
+        .flex-container7 {
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .flex-container7 div {
+            background-color: rgb(30, 255, 0);
+            width: 50px;
+            height: 40px;
+            margin: 0;
+        }
+
+        .flex-container7 .div2 {
+            flex-grow: 1;
+        }
+
+        .flex-container8 {
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .flex-container8 div {
+            background-color: rgb(30, 255, 0);
+            flex-basis: 150px;
+            margin: 0;
+        }
+
+        .flex-container8 .div3 {
+            flex-shrink: 4;
+        }
+
+        .flex-container8 .div1 {
+            flex-shrink: 2;
+        }
+
+        .flex-container9 {
+            justify-content: center;
+            gap: 5px;
+            flex-direction: column;
+        }
+
+        .flex-container9 div {
+            background-color: rgb(0, 98, 255);
+            flex-basis: 100px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .flex-container9 .div3 {
+            order: 1;
+            align-self: center;
+        }
+
+        .flex-container9 .div4 {
+            order: -1;
+            align-self: flex-start;
+        }
+        .flex-container9 .div1 {
+            order: 0;
+            align-self: flex-end;
+        }
     </style>
 </head>
 
@@ -62,25 +154,55 @@
         <div class="div1">1</div>
         <div class="div2">2</div>
         <div class="div3">3</div>
-        <div class="div3">4</div>
+        <div class="div4">4</div>
     </div>
     <div class="flexbox flex-container2">
         <div class="div1">1</div>
         <div class="div2">2</div>
         <div class="div3">3</div>
-        <div class="div3">4</div>
+        <div class="div4">4</div>
     </div>
     <div class="flexbox flex-container3">
         <div class="div1">1</div>
         <div class="div2">2</div>
         <div class="div3">3</div>
-        <div class="div3">4</div>
+        <div class="div4">4</div>
     </div>
     <div class="flexbox flex-container4">
         <div class="div1">1</div>
         <div class="div2" style="font-size: 36px;">2</div>
         <div class="div3">3</div>
-        <div class="div3">4</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="flexbox flex-container5">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="flexbox flex-container6">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="flexbox flex-container7">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="flexbox flex-container8">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="flexbox flex-container9">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
     </div>
 </body>
 
