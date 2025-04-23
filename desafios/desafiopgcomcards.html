@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página com cards</title>
+
+    <style>
+        body {
+            background-image: url(imagens/bg-2.jpg);
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: sans-serif;
+            width: 70%;
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            padding: 12px;
+            gap: 12px;
+        }
+
+        .content {
+            margin: 0;
+            background-color: rgb(40, 39, 39);
+            color: white;
+            padding: 10px;
+        }
+
+        .header{
+            text-align: center;
+        }
+
+        .titulo {
+            color: white;
+            text-transform: uppercase;
+            font-size: 50px;
+            margin: 100px 0 15px 0;
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .sbtitulo {
+            display: inline-block;
+            color: white;
+            background-color: rgb(40, 39, 39, 0.7);
+            border-bottom: 2px solid;
+            margin: 0 0 40px 0;
+            padding: 10px;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="titulo">Cursos serfrontend</h1>
+        <p class="sbtitulo">Tudo o que precisa saber para iniciar na carreira</p>
+    </div>
+    <div class="container">
+        <div class="cards">
+            <img src="imagens/card_01.png" alt="seletores">
+            <p class="content">Seletores</p>
+        </div>
+        <div class="cards"><img src="imagens/card_02.jpg" alt="posicionamento">
+            <p class="content"> Posicionamento</p>
+        </div>
+        <div class="cards"><img src="imagens/card_03.jpg" alt="fontes">
+            <p class="content">Fontes</p>
+        </div>
+        <div class="cards"><img src="imagens/card_04.jpg" alt="flexbox">
+            <p class="content">Flexbox</p>
+        </div>
+        <div class="cards"><img src="imagens/card_05.jpg" alt="cssgrid">
+            <p class="content">CSS Grid</p>
+        </div>
+        <div class="cards"><img src="imagens/card_01.png" alt="semântica">
+            <p class="content">Semântica</p>
+        </div>
+        </ul>
+    </div>
+</body>
+
+</html>
