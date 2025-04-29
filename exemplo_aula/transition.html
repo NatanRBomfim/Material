@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        div {
+            /* --anima: cubic-bezier(.96,.89,.88,-0.41);*/
+
+            background-color: blue;
+            width: 200px;
+            height: 150px;
+            margin: 100px;
+            transition-property: width, height, background-color; /* da para utilizar o all para usar em todas as funções*/
+            transition-duration: 1s, .5s;
+            transition-timing-function: cubic-bezier(.96, .89, .88, -0.41);
+            transition-delay: .5s, 1s;
+
+            /*transition: property duration fuction delay*/
+            /*forma abreviada - transition: width 1s var(--anima) .5s, height .5s var(--anima) 1s, background-color .5s var(--anima)*/
+        }
+
+        div:hover {
+            width: 400px;
+            height: 300px;
+            background-color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
