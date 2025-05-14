@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+        body {
+            margin: auto;
+            padding: 0 70px;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        table,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            background-color: rgb(250, 249, 204);
+            padding: 5px;
+        }
+
+        th {
+            padding: 10px 200px;
+            background-color: rgb(168, 181, 92);
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <caption>Tabela de preços de cursos</caption>
+    <table>
+        <thead>
+            <tr>
+                <th>Área</th>
+                <th>Curso</th>
+                <th>Investimento</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="3">Design</td>
+                <td>InDesign</td>
+                <td>R$1000,00</td>
+            </tr>
+            <tr>
+                <td>Photoshop</td>
+                <td>R$1000,00</td>
+            </tr>
+            <tr>
+                <td>Ilustrator</td>
+                <td>R$1000,00</td>
+            </tr>
+            <tr>
+                <td rowspan="4">Development</td>
+                <td>HTML</td>
+                <td>R$1000,00</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>R$1000,00</td>
+            </tr>
+            <tr>
+                <td>Javascript</td>
+                <td>R$1000,00</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>R$1000,00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Valores sujeitos a alteração sem prévio aviso</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
