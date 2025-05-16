@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Popover</title>
+    <style>
+        body {
+            background-color: rgb(225, 225, 225);
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+
+        .container-profile{
+            background-color: white;
+            width: 25%;
+            margin: auto;
+            padding: 1px 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgb(178, 178, 178);
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .botao {
+            background-color: rgb(0, 110, 235);
+            border-radius: 3px;
+            border: none;
+            padding: 10px;
+            color: white;
+        }
+
+        ::backdrop {
+            background-color: rgba(0, 0, 0, .35);
+        }
+
+        :popover-open {
+            inset: unset;
+            position: absolute;
+            left: 50%;
+            top: 100px;
+            padding: 10px;
+            background-color: rgb(0, 110, 235);
+            border: 1px solid white;
+            color: white;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-profile">
+        <div class="content">
+            <div class="dados">
+                <h2>Perfil de Cauã Victor</h2>
+                <p><strong>Nome:</strong> Cauã Victor</p>
+            </div>
+            <div>
+                <button class="botao" popovertarget="btpopover">Ajuda</button>
+                <div id="btpopover" popover="manual">O nome completo do usuário. Ele pode ser alterado nas configurações
+                    de perfil.</div>
+            </div>
+        </div>
+        <hr>
+        <h2>Informações de contato</h2>
+        <p><strong>Email:</strong> cauavictor@example.com</p>
+    </div>
+</body>
+
+</html>
