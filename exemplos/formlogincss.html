@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form login</title>
+
+    <style>
+        html {
+            background-color: #95a5a6;
+            font-family: Helvetica, arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        form {
+            width: 350px;
+            background-color: #ecf0f1;
+            box-shadow: 3px 3px 10px #333;
+            border-radius: 5px;
+            padding: 1em;
+
+
+        }
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        legend {
+            text-align: center;
+            font-weight: bold;
+            color: #454e4f;
+            font-size: 1.2em;
+            margin-bottom: .5em;
+            padding: 1em;
+
+        }
+
+        label {
+            margin-bottom: .2em;
+        }
+
+        input {
+            margin-bottom: 1.5em;
+            border-radius: .25em;
+            border: 1px solid #bbb;
+            padding: .6em;
+            font-size: 1em;
+        }
+
+        input,
+        label {
+            width: 100%;
+            box-sizing: border-box;
+
+        }
+
+        .btn {
+            cursor: pointer;
+            background-color: rgb(42, 42, 130);
+            color: white;
+        }
+
+        .btn2 {
+            cursor: pointer;
+            background-color: rgb(117, 40, 44);
+            color: white;
+        }
+
+        .actions{
+            display: flex;
+            gap: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Entre com seus dados de acesso</legend>
+            <label for="user">Usuário:</label>
+            <input type="text" id="user" required autofocus>
+
+            <label for="pass">Senha:</label>
+            <input type="password" id="pass" required>
+
+            <div class="actions">
+                <input type="reset" value="Apagar" class="btn2">
+                <input type="submit" value="Entrar" class="btn">
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
