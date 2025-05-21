@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meter e Progress</title>
+
+    <style>
+        input,progress{
+            accent-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meter</h1>
+    
+    <label for="combustivel">Nivel de combustivel
+    <meter id="combustivel" value="50" min="0" max="100"  low="30" high="70" optimum="80"></meter>
+    </label>
+    
+    <h1>Progresso</h1>
+    <label>Progresso da tarefa
+        <progress max="100" value="70">70%</progress>
+    </label>
+
+    <form oninput="result.value = a.value * b.value">
+        <input type="number" name="a" id="a"> X
+        <input type="number" name="b" id="b"> =
+        <output name="result" for="a b"></output>
+    </form>
+
+
+</body>
+</html>

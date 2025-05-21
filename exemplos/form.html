@@ -1,118 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 
     <title>Formulario</title>
 
     <style>
-        textarea {
-            resize: none;
-        }
+      textarea {
+        resize: none;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <form action="#" method="get">
-        <fieldset>
-            <legend>Introdução</legend>
+      <fieldset>
+        <legend>Introdução</legend>
 
-            <label>email</label>
-            <br>
-            <input type="email" name="email" placeholder="meuemail@gmail.com">
-            <br><br>
+        <label>email</label>
+        <br />
+        <input type="email" name="email" placeholder="meuemail@gmail.com" />
+        <br /><br />
 
-            <label>number</label>
-            <br>
-            <input type="number" min="0" max="10">
+        <label>number</label>
+        <br />
+        <input type="number" min="0" max="10" />
 
-            <br><br>
+        <br /><br />
 
-            <label>date</label>
-            <br>
-            <input type="date" min="2025-05-01" max="2025-05-25">
-            <br><br>
+        <label>date</label>
+        <br />
+        <input type="date" min="2025-05-01" max="2025-05-25" />
+        <br /><br />
 
-            <label for="atv">Possui atividade extra?</label>
-            <label>
-                <input type="radio" name="atvExtra" id="atv">Sim
-            </label>
-            <label>
-                <input type="radio" name="atvExtra" id="atv">Não
-            </label>
-        </fieldset>
-        <fieldset>
-            <legend>Área de interesse</legend>
+        <label for="atv">Possui atividade extra?</label>
+        <label> <input type="radio" name="atvExtra" id="atv" />Sim </label>
+        <label> <input type="radio" name="atvExtra" id="atv" />Não </label>
+      </fieldset>
+      <fieldset>
+        <legend>Área de interesse</legend>
 
-            <label>
-                <input type="checkbox" name="interesse" value="js">Java Script
-            </label>
-            <label>
-                <input type="checkbox" name="interesse" value="css">CSS
-            </label>
-            <label>
-                <input type="checkbox" name="interesse" value="html">HTML
-            </label>
-            <label>
-                <input type="checkbox" name="interesse" value="php">PHP
-            </label>
-            <label>
-                <input type="checkbox" name="interesse" value="python">Python
-            </label>
+        <label>
+          <input type="checkbox" name="interesse" value="js" />Java Script
+        </label>
+        <label>
+          <input type="checkbox" name="interesse" value="css" />CSS
+        </label>
+        <label>
+          <input type="checkbox" name="interesse" value="html" />HTML
+        </label>
+        <label>
+          <input type="checkbox" name="interesse" value="php" />PHP
+        </label>
+        <label>
+          <input type="checkbox" name="interesse" value="python" />Python
+        </label>
 
-            <br><br>
-            <label>
-                <select name="selectorLinguagem" required multiple size="7">
-                    <option value="">Selecione uma</option>
-                    <optgroup label="frontend">
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        <option value="js">Javascript</option>
-                    </optgroup>
-                    <optgroup label="backend">
-                        <option value="php">PHP</option>
-                        <option value="java">Java</option>
-                        <option value="python">Python</option>
-                    </optgroup>
-                </select>
-            </label>
+        <br /><br />
+        <label>
+          <select name="selectorLinguagem" required multiple size="7">
+            <option value="">Selecione uma</option>
+            <optgroup label="frontend">
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="js">Javascript</option>
+            </optgroup>
+            <optgroup label="backend">
+              <option value="php">PHP</option>
+              <option value="java">Java</option>
+              <option value="python">Python</option>
+            </optgroup>
+          </select>
+        </label>
 
-            <label>
-                <input type="text" list="listagem">
-                <datalist id="listagem">
-                    <option value="frontend">Javascript</option>
-                    <option value="frontend">HTML</option>
-                    <option value="frontend">CSS</option>
-                    <option value="backend">PHP</option>
-                    <option value="backend">Python</option>
-                </datalist>
-            </label>
-        </fieldset>
+        <label>
+          <input type="text" list="listagem" />
+          <datalist id="listagem">
+            <option value="frontend">Javascript</option>
+            <option value="frontend">HTML</option>
+            <option value="frontend">CSS</option>
+            <option value="backend">PHP</option>
+            <option value="backend">Python</option>
+          </datalist>
+        </label>
+      </fieldset>
 
-        <fieldset>
-            <legend>Mensagem</legend>
+      <fieldset>
+        <legend>Mensagem</legend>
 
-            <textarea name="msg" cols="50" rows="10" maxlength="300"></textarea>
+        <textarea name="msg" cols="50" rows="10" maxlength="300"></textarea>
 
-            <textarea cols="50" rows="10" readonly>
+        <textarea cols="50" rows="10" readonly>
  Contrato de licença:
      regra 1.1 regra 1
      regra 1.2 regra 2
                 </textarea>
-            <br>
-            <input type="file">
-        </fieldset>
-        <br><br>
-        <input type="search">
-        <br><br>
-        <input type="range" min="0" max="10" step="2">
-        <br><br>
-        <input type="submit" value="Mandar">
-
-        
-
+        <br />
+        <input type="file" />
+      </fieldset>
+      <br /><br />
+      <input type="search" />
+      <br /><br />
+      <input type="range" min="0" max="10" step="2" />
+      <br /><br />
+      <input type="submit" value="Mandar" />
     </form>
-</body>
-
+  </body>
 </html>
