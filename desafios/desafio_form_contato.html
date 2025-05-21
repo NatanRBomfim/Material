@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Formulario de contato</title>
+
+    <style>
+      html {
+        background-color: #181818;
+        font-family: "Helvica Neue", Arial, sans-serif;
+        color: white;
+      }
+      
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      form {
+        width: 90%;
+        min-width: 28.125em;
+        max-width: 35em;
+        background-color: rgb(15, 15, 15);
+        padding: 0.5em;
+      }
+
+      fieldset {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      legend {
+        text-align: center;
+        padding: 1em;
+        font-size: 1.25em;
+        color: rgb(161, 161, 161);
+      }
+
+      textarea,
+      input {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 2px solid transparent;
+        border-bottom: 2px solid white;
+        padding: 0.75em;
+        margin: 0.5em 0 2.5em;
+        color: white;
+        outline: 0;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      input:invalid:focus,
+      textarea:invalid:focus {
+        border-bottom: 2px solid #ff000d;
+      }
+
+      input:valid:focus,
+      textarea:valid:focus {
+        border-bottom: 2px solid #0ec72a;
+      }
+
+      input:focus,
+      textarea:focus {
+        background-color: #2a2727;
+      }
+
+      .btn {
+        background-color: #3f3f3f;
+        color: white;
+        border: none;
+        padding: 0.7em;
+        font-size: 1em;
+        cursor: pointer;
+        width: fit-content;
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#">
+      <fieldset>
+        <legend>Formulário de contato</legend>
+
+        <label for="nome">Seu nome</label>
+        <input
+          type="text"
+          name="nome"
+          placeholder="Digite seu nome completo"
+          id="nome"
+          required
+        />
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Digite um e-mail válido"
+          required
+        />
+
+        <label for="assunto">Assunto</label>
+        <input type="text" name="assunto" id="assunto" />
+
+        <label for="msg">Mensagem</label>
+        <textarea
+          name="msg"
+          id="msg"
+          rows="7"
+          required
+          maxlength="1000"
+          minlength="20"
+          placeholder="conte-nos tudo"
+        ></textarea>
+
+        <button type="submit" class="btn">Enviar</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
