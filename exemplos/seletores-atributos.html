@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seletores de atributos</title>
+
+    <style>
+      a[href="#"]:not(.link-ok) {
+        opacity: 0.2;
+      }
+
+      a[href^="www"] {
+        color: red;
+      }
+
+      a[href$=".pdf"] {
+        color: green;
+      }
+
+      a[target] {
+        text-decoration: none;
+      }
+
+      /*a:not(.link-ok){
+        background-color: rgb(1, 1, 1);
+        color: white
+      }
+        */
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">link falso</a></li>
+      <li><a href="#" class="link-ok">link falso</a></li>
+      <li>
+        <a href="www.google.com/search" target="_blank">link verdadeiro</a>
+      </li>
+      <li><a href="pastas/arquivo.pdf">link para um pdf</a></li>
+      <li><a href="seletores-compostos.html">link interno</a></li>
+      <li>exemplo</li>
+    </ul>
+  </body>
+</html>
