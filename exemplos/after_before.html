@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>After e Before</title>
+
+    <style>
+        p::after{
+            content: "DEPOIS";
+        }
+        p::before{
+            content: "ANTES";
+        }
+
+        div{
+            border: 3px solid red;
+            padding: 1em;
+            position: relative;
+        }
+        p{
+            margin: 0;
+        }
+
+        div::after{
+            content: "";
+            width: 1em;
+            height: 1em;
+            display: block;
+            background-color: red;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        /*div::before{
+            content: "";
+            width: 1em;
+            height: 1em;
+            display: block;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+            */
+        div::before{
+            content: url(https://placehold.co/64x64/0000FF/ffffff);
+            float: left;
+            margin-right: 1em;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eum
+        assumenda ea inventore, dignissimos ut obcaecati! Id magni rerum in
+        earum qui corrupti ea, nulla repudiandae a numquam recusandae similique
+        iure vitae quas mollitia neque. Ea culpa ad voluptate neque, maxime
+        unde! Ipsum, soluta sed facere necessitatibus aspernatur eum minus
+        dignissimos mollitia libero, in vitae doloribus repellendus quisquam
+        nobis sit sint distinctio ducimus architecto pariatur consequatur
+        reprehenderit facilis explicabo. Iure, laborum maiores enim distinctio
+        quaerat earum perspiciatis cum nam nostrum quia eius molestiae eos
+        expedita quasi asperiores, laudantium reiciendis eveniet et iste ipsa
+        rem quae quas velit. Enim consectetur nemo cupiditate commodi est quo
+        dolorum voluptatum, hic sed, mollitia necessitatibus corporis laudantium
+        quasi libero dolor fugiat reprehenderit dolorem quod! Sed, officiis.
+        Dolore, at, cupiditate corrupti iusto tempora quasi nostrum labore
+        ducimus debitis dolorem, numquam enim ea in sint ipsum dolores.
+        Recusandae laboriosam aliquid quo veritatis hic obcaecati voluptas odit
+        incidunt?
+      </p>
+    </div>
+  </body>
+</html>
