@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Pseudo classes child</title>
+
+    <style>
+      /*div :first-child{
+            color: red;
+        }*/
+      p,
+      a {
+        font-size: 2em;
+      }
+      p:first-child {
+        color: green;
+      }
+
+      p:last-child {
+        color: brown;
+      }
+
+      p:nth-child(2) {
+        background-color: wheat;
+      }
+
+      p:first-of-type {
+        font-style: italic;
+      }
+
+      p:last-of-type {
+        text-decoration: underline;
+      }
+
+      p:nth-of-type(3) {
+        text-transform: uppercase;
+      }
+
+      /* li:nth-of-type(odd){
+            background-color: red;
+        }
+
+         li:nth-of-type(even){
+            background-color: blueviolet;
+        }
+            */
+      
+        li:nth-child(3n - 2){
+            color: red;
+        }
+
+       
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>paragrafo um</p>
+      <p>paragrafo dois</p>
+      <p>paragrafo tres</p>
+    </div>
+    <hr />
+    <div>
+      <a href="#">paragrafo com link</a>
+      <p>paragrafo um</p>
+      <p>paragrafo dois</p>
+      <p>paragrafo tres</p>
+      <p>paragrafo quatro</p>
+
+      <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+        <li>item 7</li>
+        <li>item 8</li>
+        <li>item 9</li>
+        <li>item 10</li>
+      </ul>
+    </div>
+  </body>
+</html>
