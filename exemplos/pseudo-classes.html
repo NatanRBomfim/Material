@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo classes</title>
+
+    <style>
+      button:disabled {
+        opacity: 0.5;
+      }
+
+      button {
+        margin-right: 1em;
+        padding: 1em;
+        border: none;
+        color: white;
+        background-color: black;
+      }
+
+      p:empty::before{
+        content: "Paragrafo vazio!";
+      }
+
+      a:focus{
+        background-color: yellow;
+      }
+
+      body::selection{
+        background-color: red;
+        color: white;
+      }
+
+      input[type="text"]:read-write{
+        background-color: yellow;
+      }
+
+      input[type="text"]:read-only{
+        background-color: gray;
+      }
+
+      input[type="text"]:disabled{
+        background-color: red;
+      }
+      
+      input[type="text"]::placeholder{
+        color: black;
+        text-transform: uppercase;
+      }
+
+      input[type="text"]:placeholder-shown{
+        background-color: rgba(255, 140, 0, 0.388);
+      }
+
+      p:only-child{
+        background-color: brown;
+      }
+      
+      p:read-write{
+        border-bottom: 2px solid red;
+      }
+      
+      div:target{
+        border: 2px dashed red ;
+      }
+      
+    </style>
+    
+  </head>
+
+  <body>
+    <div id="top">
+      <a href="#bottom">vai para baixo</a>
+      <br>
+      <button>Vai</button>
+      <button disabled>Vai disabled</button>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, fuga?
+      </p>
+    </div>
+    <p> </p>
+    <p></p>
+
+    <ol>
+        <li><a href="#">item</a></li>
+        <li><a href="#">item</a></li>
+        <li><a href="#">item</a></li>
+        <li><a href="#">item</a></li>
+    </ol>
+
+    <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, optio?</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, optio?</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, optio?</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, optio?</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, optio?</p>
+    
+    <input type="text" value="value comum"><br><br>
+    <input type="text" value="value readonly" readonly><br><br>
+    <input type="text" value="value disabled" disabled><br><br>
+    <input type="text" placeholder="value placeholder">
+
+    <div>
+        <p>Paragrafo</p>
+    </div>
+    <div>
+        <p>paragrafo</p>
+        <p contenteditable>paragrafo editavel</p>
+    </div>
+
+    <div id="bottom">
+        <h1>texto</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta at inventore soluta doloribus itaque repudiandae nobis enim consequuntur. Totam, quod!</p>
+        <a href="#top">vai para cima</a>
+    </div>
+</html>
