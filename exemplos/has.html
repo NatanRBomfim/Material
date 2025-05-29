@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Has</title>
+
+    <style>
+        p a{
+            color: yellow;
+            background-color: red;
+        }
+
+        p:has(a){
+            background-color: gray;
+        }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea fugiat
+      exercitationem necessitatibus <a href="#">link aqui</a> velit numquam, eum et quisquam quibusdam
+      nemo, tempora ab saepe perspiciatis veritatis consequuntur distinctio,
+      beatae totam unde nihil?
+    </p>
+
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea fugiat
+      exercitationem necessitatibus <a href="#">link aqui</a> velit numquam, eum et quisquam quibusdam
+      nemo, tempora ab saepe perspiciatis veritatis consequuntur distinctio,
+      beatae totam unde nihil?
+    </p>
+
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea fugiat
+      exercitationem necessitatibus velit numquam, eum et quisquam quibusdam
+      nemo, tempora ab saepe perspiciatis veritatis consequuntur distinctio,
+      beatae totam unde nihil?
+    </p>
+  </body>
+</html>
