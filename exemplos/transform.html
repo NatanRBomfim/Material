@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transforme</title>
+
+    <style>
+      div {
+        width: 200px;
+        margin: 0 auto;
+        outline: 2px solid black;
+        padding: 0.5em;
+      }
+      p {
+        width: 80%;
+      }
+
+      .destaque {
+        background-color: yellow;
+      }
+
+      .div1 .destaque {
+        transform: translate(80%, 100%);
+      }
+
+      .div2 .destaque {
+        transform: rotate(50deg);
+      }
+
+      .div3 .destaque {
+        transform: scale(1.6, 2);
+      }
+
+      .div4 .destaque{
+        transform: skew(10deg, 14deg);
+      }
+
+      .div5 .destaque{
+        transform: rotate(-50deg) translate(0);
+        transform-origin: left top;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+      <p class="destaque">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+    </div>
+
+    <div class="div2">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+      <p class="destaque">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+    </div>
+
+    <div class="div3">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+      <p class="destaque">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+    </div>
+
+    <div class="div4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+      <p class="destaque">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+    </div>
+     <div class="div5">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+      <p class="destaque">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+        distinctio.
+      </p>
+    </div>
+  </body>
+</html>
