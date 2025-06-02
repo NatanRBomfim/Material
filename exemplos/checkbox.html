@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox</title>
+
+    <style>
+      .chk1,
+      input[type="checkbox"] {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+      }
+
+      label span {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        border: 1px solid rgb(111, 111, 111);
+        border-radius: 2.5px;
+        position: relative;
+        transition-property: background-color, border;
+        transition-duration: 0.5s;
+      }
+
+      .chk1:checked + label span {
+        background-color: rgb(255, 165, 40);
+        border: 1px solid rgb(255, 165, 40);
+      }
+
+      .chk1:checked + label span::after {
+        content: "";
+        display: block;
+        border-left: 2.5px solid white;
+        border-bottom: 2.5px solid white;
+        transform: rotate(-52deg);
+        position: absolute;
+        top: 17%;
+        left: 10%;
+        right: 5%;
+        bottom: 35%;
+      }
+
+      .chk1:checked + label span:hover {
+        background-color: rgb(42, 85, 179);
+        border: 1px solid rgb(42, 85, 179);
+      }
+
+      .lbl2 input[type="checkbox"]:checked + span {
+        background-color: rgb(255, 40, 90);
+        border: 1px solid rgb(255, 40, 90);
+      }
+
+      .lbl2 span {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        border: 1px solid rgb(111, 111, 111);
+        border-radius: 2.5px;
+        position: relative;
+        transition-property: background-color, border;
+        transition-duration: 0.5s;
+      }
+
+      .lbl2 input[type="checkbox"] + span::before {
+        content: "";
+        display: block;
+        border-left: 2.5px solid black;
+        border-bottom: 2.5px solid black;
+        transform: rotate(-52deg);
+        position: absolute;
+        top: 17%;
+        left: 10%;
+        right: 5%;
+        bottom: 35%;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+      }
+
+      .lbl2 input[type="checkbox"]:checked + span::before {
+        opacity: 1;
+      }
+
+      .lbl2 input[type="checkbox"]:focus + span {
+        outline: 2px solid black;
+        outline-offset: -1px;
+      }
+
+      .switch span {
+        position: relative;
+        width: 1.8em;
+        height: 0.8em;
+        border: 1px solid rgb(217, 217, 217);
+        border-radius: 10px;
+        background-color: white;
+        transition: background-color 0.3s;
+        overflow:hidden;
+      }
+      .switch span::after {
+        content: "";
+        height: 13px;
+        width: 13px;
+        display: block;
+        border-radius: 50%;
+        background-color: rgb(217, 217, 217);
+        transition: all 0.4s;
+        transform: translateX(0);
+        position: absolute;
+        z-index: 1;
+      }
+
+      .switch span::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        background-color: rgb(217, 217, 217);
+        transition: all 0.4s;
+        transform: translateX(-100%);
+        position: absolute;
+        z-index: 0;
+      }
+
+      .switch input[type="checkbox"]:checked + span::before {
+        transform: translateX(0);
+      }
+
+      .switch input[type="checkbox"]:checked + span::after {
+        background-color: white;
+        transform: translateX(120%);
+      }
+
+      .switch input[type="checkbox"]:focus + span {
+        outline: 1px solid black;
+        outline-offset: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>checkbox</h1>
+
+    <input type="checkbox" name="hmtl" id="html" class="chk1" />
+    <label for="html"> <span></span>HTML</label>
+
+    <input type="checkbox" name="css" id="css" class="chk1" />
+    <label for="css"><span></span>CSS</label>
+
+    <input type="checkbox" name="js" id="js" class="chk1" />
+    <label for="js"><span></span>JAVASCRIPT</label>
+
+    <hr />
+
+    <label class="lbl2">
+      <input type="checkbox" /><span></span>JAVASCRIPT
+    </label>
+    <label class="lbl2"> <input type="checkbox" /><span></span>CSS </label>
+    <label class="lbl2"> <input type="checkbox" /><span></span>HTML </label>
+
+    <hr />
+
+    <label class="switch">
+      <input type="checkbox" checked /><span></span>CSS
+    </label>
+    <label class="switch"> <input type="checkbox" /><span></span>HTML </label>
+    <label class="switch">
+      <input type="checkbox" /><span></span>JAVASCRIPT
+    </label>
+  </body>
+</html>
