@@ -1,0 +1,146 @@
+:root {
+    --primary-color: #6d0b0b;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: linear-gradient(to top, rgb(0 0 255 / .5) 30%, red 60%), url(imagens/tile.png);
+    background-attachment: fixed, scroll;
+    background-blend-mode: color;
+}
+
+.cores {
+    border: 8px dashed color-mix(in srgb, var(--primary-color), transparent 40%);
+    width: 70%;
+    margin: 20px auto;
+    padding: 50px;
+}
+
+.cores p {
+    margin: 0;
+}
+
+section {
+    counter-reset: contador;
+}
+
+.cores {
+    counter-increment: contador;
+}
+
+.cores::before {
+    content: "[ " counter(contador)" ]";
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.cores:nth-child(2) {
+    background-color: peru;
+    background-clip: content-box;
+}
+
+.cores:nth-child(3) {
+    background-color: hsl(100deg, 60%, 50%, .5);
+    box-shadow: 10px 12px 6px hsl(100deg, 60%, 30%) inset;
+
+}
+
+.cores:nth-child(3):hover {
+    background-color: hsl(100deg, 60%, 40%);
+
+}
+
+.cores:nth-child(4) {
+    background-image: linear-gradient(70deg, blue, transparent),
+        linear-gradient(to top, red, transparent);
+    background-clip: content-box, padding-box;
+}
+
+.cores:nth-child(5) {
+    background-image: radial-gradient(blue 20%, #f008 30%, green 10%, purple 60%);
+}
+
+.cores:nth-child(6) {
+    background-image: radial-gradient(circle, purple 10%, #f008 40%, purple 50%, black 100%);
+}
+
+.cores:nth-child(7) {
+    /*background-image: radial-gradient(circle at bottom, purple 10%, #f008 40%, purple 50%, black 100%);*/
+    background-image: radial-gradient(circle at 80% 30%, purple 10%, #f008 40%, purple 50%, black 100%);
+}
+
+.cores:nth-child(8) {
+    background-image: radial-gradient(closest-corner at 80% 30%, purple, #f008);
+}
+
+.cores:nth-child(9) {
+    background-image: radial-gradient(farthest-corner at 80% 30%, purple, #f008);
+}
+
+.cores:nth-child(10) {
+    background-image: radial-gradient(closest-side at 80% 30%, purple, #f008);
+}
+
+.cores:nth-child(11) {
+    background-image: radial-gradient(farthest-side at 80% 30%, purple, #f008);
+}
+
+.cores:nth-child(12) {
+    background-image: radial-gradient(circle farthest-side at 90px 170px, blue, #f008),
+        radial-gradient(circle farthest-corner at top right, yellow, transparent)
+}
+
+.cores:nth-child(13) {
+    background-image: radial-gradient(at bottom, purple, #f008),
+        radial-gradient(at top, yellow, transparent);
+}
+
+.cores:nth-child(14) {
+    background-image: conic-gradient(from 25deg, red 20%, blue, yellow, green);
+}
+
+.cores:nth-child(15) {
+    background-image: conic-gradient(#f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+    transition: filter 6s linear;
+    aspect-ratio: 14/5;
+}
+
+.cores:nth-child(15):hover {
+    filter: hue-rotate(15turn);
+}
+
+.cores:nth-child(16) {
+    background-image: repeating-linear-gradient(to top right, white 0px, white 10px, black 10px, black 15px);
+}
+
+.cores:nth-child(17) {
+    background-image: repeating-radial-gradient(white 0px, white 20px, black 20px, black 30px);
+}
+
+.cores:nth-child(18) {
+    background-image: repeating-conic-gradient(white 0deg, red 10deg, blue 10deg, black 20deg);
+}
+
+.cores:nth-child(19) {
+    background-image: repeating-conic-gradient(transparent 0deg, transparent 10deg, blue 10deg, black 20deg),
+        repeating-radial-gradient(red 0%, transparent, blue 20%);
+    background-attachment: fixed, scroll;
+}
+
+.cores:nth-child(20) {
+    background-image: repeating-radial-gradient(red 0%, transparent, blue 10%),
+        repeating-linear-gradient(red, blue);
+    background-attachment: scroll, fixed;
+    aspect-ratio: 16/9;
+}
+
+.cores:nth-child(21) {
+    background-image: linear-gradient(to top right, transparent 50%, blue 50%);
+    box-shadow: 10px 10px 6px black;
+}
+
+.cores:nth-child(22) {
+    background-image: linear-gradient(to top right, transparent 50%, blue 50%);
+    filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, .8));
+}
