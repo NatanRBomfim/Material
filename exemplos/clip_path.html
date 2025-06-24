@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip-path</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: brown;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        h2 {
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        .cards {
+            width: 350px;
+            padding: 30px 20px 20px 40px;
+            box-sizing: border-box;
+            background-image: linear-gradient(135deg, transparent 20px, white 20px);
+            filter: drop-shadow(0px 0px 5px black);
+        }
+
+        .cards::before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(153, 153, 153, 0.237);
+            clip-path: polygon(94% 0%, 92% 92%, 0% 94%);
+            filter: drop-shadow(0px 0px 5px black);
+        }
+
+
+        .exemplo {
+            width: 0;
+            height: 0;
+            border-top: 10px solid black;
+            border-bottom: 25px solid red;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            margin-top: 15px;
+        }
+
+        .clippath>div {
+            width: 350px;
+            height: 350px;
+            background-image: repeating-linear-gradient(35deg, yellow 20%, orange 30%);
+
+        }
+
+        #d1 {
+            clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+        }
+
+        #d2 {
+            clip-path: circle(150px at center);
+        }
+
+        #d3 {
+            clip-path: ellipse(50% 50px at center);
+        }
+
+        #d4 {
+            clip-path: inset(80px 40px 30px 40px);
+        }
+
+        #d5 {
+            clip-path: inset(30px round 50px 20px 10px 25% / 20px 50px 45px 40%)
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="cards">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere totam tenetur nostrum, porro
+                doloremque rerum velit itaque vel dolores? Enim delectu
+        </div>
+        <div class="exemplo"></div>
+    </section>
+    <section class="clippath">
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+    </section>
+</body>
+
+</html>
