@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Post-its</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: brown;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        h1 {
+            color: white;
+            font-size: 35px;
+            text-align: center;
+            margin: 35px;
+        }
+
+        h1,
+        h2 {
+            font-weight: lighter;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        section {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .cards {
+            /*width: 350px;*/
+            /*flex-basis: calc(33% - 25px);*/
+            flex-basis: clamp(300px, calc(33% - 25px), 400px);
+            flex-grow: 1;
+            padding: 30px 20px 20px 40px;
+            box-sizing: border-box;
+            position: relative;
+            background-image: linear-gradient(135deg, transparent 20px, white 20px);
+            filter: drop-shadow(0px 0px 5px black);
+        }
+
+        .pontaSimples {
+            background-image: linear-gradient(135deg, transparent 25px, rgb(153, 153, 153) 25px),
+                linear-gradient(135deg, transparent 25px, white 25px);
+            background-size: 34px 34px, 100%;
+            background-repeat: no-repeat;
+        }
+
+        .pontaDetalhada::before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(135deg, transparent 20px, rgb(242, 242, 242) 20px);
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0));
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Post-its</h1>
+    <section>
+        <div class="cards">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere totam tenetur nostrum, porro
+                doloremque rerum velit itaque vel dolores? Enim delectu
+        </div>
+        <div class="cards">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere totam tenetur nostrum, porro
+                doloremque rerum velit itaque vel dolores? Enim delectu
+        </div>
+        <div class="cards">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere totam tenetur nostrum, porro
+                doloremque rerum velit itaque vel dolores? Enim delectu
+        </div>
+        <div class="cards pontaSimples">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere totam tenetur nostrum, porro
+                doloremque rerum velit itaque vel dolores? Enim delectu
+        </div>
+        <div class="cards pontaSimples">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere totam tenetur nostrum, porro
+                doloremque rerum velit itaque vel dolores? Enim delectu
+        </div>
+        <div class="cards pontaSimples">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere totam tenetur nostrum, porro
+                doloremque rerum velit itaque vel dolores? Enim delectu
+        </div>
+        <div class="cards pontaDetalhada">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere totam tenetur nostrum, porro
+                doloremque rerum velit itaque vel dolores? Enim delectu
+        </div>
+        <div class="cards pontaDetalhada">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere totam tenetur nostrum, porro
+                doloremque rerum velit itaque vel dolores? Enim delectu
+        </div>
+        <div class="cards pontaDetalhada">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere totam tenetur nostrum, porro
+                doloremque rerum velit itaque vel dolores? Enim delectu
+        </div>
+    </section>
+</body>
+
+</html>
