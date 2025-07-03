@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards responsivos</title>
+
+    <style>
+        body {
+            background-color: #ccc;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h2 {
+            font-weight: 300px;
+        }
+
+        .cards-responsivos {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .cards {
+            padding: 1em;
+            background-color: aquamarine;
+            box-sizing: border-box;
+
+        }
+
+        @media screen and (min-width: 800px) {
+            .cards-responsivos {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cards responsivos</h1>
+
+    <section class="cards-responsivos">
+        <article class="cards">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </article>
+        <article class="cards">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </article>
+        <article class="cards">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </article>
+    </section>
+</body>
+
+</html>
