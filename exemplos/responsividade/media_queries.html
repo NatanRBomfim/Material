@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+
+    <style>
+        body {
+            color: white;
+        }
+
+        a {
+            color: inherit
+        }
+
+        @media screen and (min-width: 600px) {
+            body {
+                background-color: brown;
+
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            body {
+                background-color: purple;
+            }
+
+            .teste{
+                width: 320px;
+                height: 80px;
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Media Query</h1>
+
+    <a href="https://github.com/NatanRBomfim/Material" title="Visite o perfil no github">Material Github</a>
+    <div class="teste">teste</div>
+
+</body>
+
+</html>
