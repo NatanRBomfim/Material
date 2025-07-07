@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em media</title>
+</head>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1,
+    h2 {
+        font-weight: lighter;
+    }
+
+    div {
+        outline: 2px solid red;
+        min-height: 50px;
+    }
+
+    .px {
+        font-size: 20px;
+    }
+
+    .px b {
+        font-size: 24px;
+    }
+
+    .em {
+        font-size: 1em;
+    }
+
+    .em b {
+        font-size: 1.5em;
+    }
+
+    @media screen and (min-width: 53.75em) {
+        body {
+            background-color: red;
+        }
+
+    }
+</style>
+
+<body>
+
+    <h1>Unidade em medidas em projetos responsivos</h1>
+    <h2>Pixel</h2>
+    <div class="px">
+        <p>Lorem ipsum dolor sit, <b>amet consectetur adipisicing elit.</b> Ducimus, rerum.</p>
+    </div>
+    <h2>Em</h2>
+    <div class="em">
+        <p>Lorem ipsum dolor sit, <b>amet consectetur adipisicing elit.</b> Ducimus, rerum.</p>
+    </div>
+    <h2>Rem</h2>
+    <div>
+        <p>Lorem ipsum dolor sit, <b>amet consectetur adipisicing elit.</b> Ducimus, rerum.</p>
+    </div>
+</body>
+
+</html>
