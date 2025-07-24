@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+
+    <style>
+        /* Usado para modificar a legenda do video */
+        ::cue {
+            color: yellow;
+            font-size: 1.6em;
+            background-color: rgb(0 0 0 / .5);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <audio src="media/mozart_trompa.mp3" controls></audio -->
+    <h1>Audio</h1>
+    <audio controls>
+        <source src="medias/mozart_trompa.mp3" type="audio/mp3">
+        <source src="medias/mozart_trompa.ogg" type="audio/ogg">
+        <p>O seu browser não suporta o recurso de áudio</p>
+    </audio>
+    <br>
+    <h1>Video</h1>
+    <video controls autoplay muted loop>
+        <source src="medias/video.mp4" type="video/mp4">
+        <source src="medias/video.ogv" type="video/ogg">
+        <source src="medias/video.webm" type="video/webm">
+        <track src="medias/track.pt.vtt" kind="captions" srclang="pt" label="Português" default>
+        </track>
+        <track src="medias/track.en.vtt" kind="captions" srclang="en" label="English">
+        </track>
+    </video>
+</body>
+
+</html>
