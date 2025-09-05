@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Perspective</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .cena {
+            border: 2px solid navy;
+            width: 300px;
+            aspect-ratio: 1;
+            margin: 2em;
+        }
+
+        .plano {
+            background-color: red;
+        }
+
+        #cena1 .plano {
+            width: 200px;
+            aspect-ratio: 1;
+            margin: 50px;
+        }
+
+
+        #cena1 {
+            perspective: 300px;
+
+        }
+
+        #cena1 .plano {
+            transform: rotateX(30deg);
+            backface-visibility: hidden;
+        }
+
+        #cena2,
+        #cena3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        #cena2 .plano,
+        #cena3 .plano {
+            margin: 10px;
+        }
+
+        #cena2 .plano {
+            transform: perspective(200px) rotateY(35deg);
+        }
+
+        #cena3 {
+            perspective: 500px;
+            perspective-origin: right top;
+
+        }
+
+        #cena3 .plano {
+            transform: rotateZ(35deg);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cena" id="cena1">
+        <div class="plano">plano</div>
+    </div>
+    <div class="cena" id="cena2">
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+    </div>
+    <div class="cena" id="cena3">
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+    </div>
+</body>
+
+</html>
