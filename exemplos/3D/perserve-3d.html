@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D preserve 3D</title>
+    <style>
+        .cena{
+            border: 1px solid gray;
+            width: 300px;
+            aspect-ratio: 1;
+            margin: 50px;
+        }
+
+        .plano{
+            width: 200px;
+            margin: 20px;
+            background-color: rgba(128, 128, 128, 0.537);
+            aspect-ratio: 1;
+        }
+
+        #cena1{
+            perspective: 400px;
+        }
+
+        #cena1 .cena1a{
+            transform: rotateY(56deg);
+            transform-style: preserve-3d;
+        }
+
+         #cena1 .cena1b{
+            transform: rotateX(66deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="cena" id="cena1">
+        <div class="cena1a plano">
+            <div class="cena1b plano">cena 1 B</div>
+        </div>
+    </div>
+</body>
+</html>
