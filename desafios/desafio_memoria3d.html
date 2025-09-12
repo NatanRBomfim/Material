@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: radial-gradient(circle at center, rgba(137, 10, 221, 0.841) 70%, rgb(162, 80, 162));
+            font-family: "roboto";
+        }
+
+        h2 {
+            margin-bottom: 2em;
+            font-size: 2em;
+        }
+
+        .container {
+            min-width: 600px;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border-radius: 2px;
+            padding: 1.8em;
+            box-shadow: 0px 15px 20px -10px rgb(42, 42, 42);
+            box-sizing: border-box;
+        }
+
+        .cards img {
+            width: 100%;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1em;
+        }
+
+        .span {
+            display: inline-block;
+            width: 130px;
+            height: 90px;
+            perspective: 600px;
+            position: relative;
+
+        }
+
+        .caixa {
+            border: 2px solid red;
+            border-radius: 3px;
+            transform-style: preserve-3d;
+            transform-origin: right bottom;
+            width: 100%;
+            height: 100%;
+            transition: transform 1s;
+        }
+
+        .front {
+            backface-visibility: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .frontcard {
+            background-image: url(imagens/back.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .hide {
+            position: absolute;
+            clip-path: rect(1px, 1px, 1px, 1px);
+            height: 0px;
+            width: 0px;
+            overflow: hidden;
+        }
+
+        .containerCards {
+            position: relative;
+        }
+
+        .centralize {
+            background-position: center;
+            background-size: cover;
+            transform: rotateY(180deg);
+        }
+
+        input[type="checkbox"]:focus~label .caixa {
+            outline: 2px solid red;
+            outline-offset: 2px;
+        }
+
+        input[type="checkbox"]:checked~label .caixa {
+            transform: translateX(-135px) rotateY(-180deg);
+        }
+
+        .span1 {
+            background-image: url(imagens/01.png);
+        }
+
+        .span2 {
+            background-image: url(imagens/02.jpg);
+        }
+
+        .span3 {
+            background-image: url(imagens/03.jpg);
+        }
+
+        .span4 {
+            background-image: url(imagens/04.png);
+        }
+
+        .span5 {
+            background-image: url(imagens/05.png);
+        }
+
+        .span6 {
+            background-image: url(imagens/06.jpg);
+        }
+
+        .span7 {
+            background-image: url(imagens/07.jpg);
+        }
+
+        .span8 {
+            background-image: url(imagens/08.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Jogo da memoria</h2>
+        <div class="cards">
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card" id="card">
+                <label for="card"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span1 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card2" id="card2">
+                <label for="card2"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span2 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card3" id="card3">
+                <label for="card3"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span1 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card4" id="card4">
+                <label for="card4"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span4 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card5" id="card5">
+                <label for="card5"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span2 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card6" id="card6">
+                <label for="card6"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span5 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card7" id="card7">
+                <label for="card7"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span5 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card8" id="card8">
+                <label for="card8"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span4 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card9" id="card9">
+                <label for="card9"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span8 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card10" id="card10">
+                <label for="card10"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span6 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card11" id="card11">
+                <label for="card11"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span7 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card12" id="card12">
+                <label for="card12"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span8 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card13" id="card13">
+                <label for="card13"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span7 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card14" id="card14">
+                <label for="card14"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span6 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card15" id="card15">
+                <label for="card15"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span3 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+
+            <div class="containerCards">
+                <input type="checkbox" class="hide" name="card16" id="card16">
+                <label for="card16"><span class="span">
+                        <div class="caixa">
+                            <div class="front frontcard"></div>
+                            <div class="front span3 centralize"></div>
+                        </div>
+                    </span></label>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
