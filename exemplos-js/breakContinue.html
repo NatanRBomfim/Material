@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break vs Continue</title>
+</head>
+
+<body>
+    <script>
+        /*
+        for (i = 1; i < 10; i++) {
+            document.write(i + "<br>")
+            if (i === 5) {
+                break;
+            }
+
+        }
+        document.write("Loop com break <br><br>")
+        for (i = 1; i < 10; i++) {
+
+            if (i === 5) {
+                continue;
+            }
+            document.write(i + "<br>")
+
+        }
+        document.write("Loop com continue")]
+        */
+
+       let contadorPar = 0
+        let total = 0
+        let contadorVezes = 0
+        while (contadorPar != 10) {
+            let d1 = parseInt(Math.random(1, 6) * 6 + 1)
+            let d2 = parseInt(Math.random(1, 6) * 6 + 1)
+            total = d1 + d2
+
+            if( d1 === d2){
+                continue
+            }
+            
+            if (total % 2 === 0) {
+                contadorPar++
+                document.write("Dado1: " + d1 + " <br>Dado2: " + d2 + " <br>Par: " + total + "<hr>")
+            }
+            else {
+                contadorVezes++
+                document.write("Tentativa: " + contadorVezes + "<hr>")
+            }
+        }
+        document.write("Total de tentativas: " + contadorVezes)
+
+    </script>
+</body>
+
+</html>

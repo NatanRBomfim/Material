@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+
+<body>
+    <script>
+        /*for(let i; i > 10; i++){}*/
+
+        let num = parseInt(prompt("Digite um numero"))
+        let i = 0
+        let b = 0
+
+        if (!isNaN(num)) {
+            while (i < 100) {
+                i++
+                document.write(num + " x " + i + " = " + (num * i) + "<br>")
+                if (i % 10 ===   0) {
+                    document.write("<hr>")
+                }
+            }
+
+        }
+
+        else {
+            document.write("Não é um numero")
+        }
+
+
+        /*  let d1 = parseInt(Math.random(1, 6) * 6 + 1)
+        let d2 = parseInt(Math.random(1, 6) * 6 + 1)
+        let contador = 0
+        while (d1 != d2) {
+            document.write("Dado 1: " + d1 + " Dado 2: " + d2 + "<br>")
+            contador++
+
+            d1 = parseInt(Math.random(1, 6) * 6 + 1)
+            d2 = parseInt(Math.random(1, 6) * 6 + 1)
+        }
+        document.write("Dado 1: " + d1 + " Dado 2: " + d2 + "<br>")
+        document.write("Foi necessario " + contador + " vezes para encontrar dois dados iguais.")*/
+
+
+    </script>
+</body>
+
+</html>
