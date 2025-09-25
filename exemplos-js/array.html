@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <script>
+        let nomes = ["Joao", "Maria", "Carlos", "Natan", "Rodrigo"] // sintaxe literal
+
+        let nome = prompt("Digite seu nome")
+
+        nomes[nomes.length] = nome
+
+        //let nomes = new Array ("Joao", "Maria", "Carlos") sintaxe construtora
+
+        for (let i = 0; i < nomes.length; i++) {
+
+            document.write("nome: " + nomes[i] + "<br>")
+
+        }
+        document.write("Tamanho de elementos na lista: " + nomes.length)
+    </script>
+</body>
+
+</html>
