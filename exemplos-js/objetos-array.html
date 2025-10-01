@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos com Array</title>
+
+</head>
+
+<body>
+    <div id="output">
+    </div>
+    <script>
+        const output = document.getElementById("output")
+        const aluno = { nome: "Natan", notas: [7, 7, 7, 1] }
+
+        output.innerHTML += `<h2>Aluno: ${aluno.nome} </h2>`
+        output.innerHTML += `<p>Notas:</p>`
+        let soma = 0
+        let lista = "<ul>"
+        for (let i = 0; i < aluno.notas.length; i++) {
+            soma += aluno.notas[i]
+            lista += "<li>" + aluno.notas[i] + "</li>"
+        }
+        lista += "</ul>"
+        output.innerHTML += lista
+        let media = soma / aluno.notas.length
+
+        output.innerHTML += `<p>Média: ${media}</p>`
+        if (media > 7) {
+            output.innerHTML += `<p>Aprovado</p>`
+        }
+        else {
+            output.innerHTML += `<p>Reprovado</p>`
+        }
+    </script>
+</body>
+
+</html>

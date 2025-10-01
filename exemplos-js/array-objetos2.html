@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array com Objetos parte 2</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        td,
+        th {
+            padding: .5em;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Produtos</th>
+                <th>Preço</th>
+                <th>Qtde em estoque</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaProdutos">
+
+        </tbody>
+    </table>
+
+    <script>
+
+        const produtos = [
+            { nome: "caneta", preco: 2, qtde: 5 },
+            { nome: "caderno", preco: 10, qtde: 2 },
+            { nome: "lapis", preco: 0.5, qtde: 10 },
+            { nome: "tesoura", preco: 5, qtde: 3 }
+        ]
+
+        const tabelaProdutos = document.getElementById("tabelaProdutos")
+
+        for (i = 0; i < produtos.length; i++) {
+            tabelaProdutos.innerHTML += ` <tr>
+                <td>${produtos[i].nome}</td>
+                <td>R$ ${produtos[i].preco.toFixed(2)}</td>
+                <td>${produtos[i].qtde}</td>
+            </tr>`
+        }
+    </script>
+</body>
+
+</html>

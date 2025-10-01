@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1>Introdução DOM</h1>
+
+    <ul id="listaPadaria">
+        <li>Pão</li>
+        <li>Mussarela</li>
+        <li>Presunto</li>
+        <li>Pão de queijo</li>
+    </ul>
+
+    <script>
+        const lista = document.getElementById("listaPadaria")
+
+        let acrescimo = prompt("Qual item quer adicionar a lista?")
+
+        lista.innerHTML = lista.innerHTML + `<li> ${acrescimo} </li>`
+    </script>
+</body>
+
+</html>

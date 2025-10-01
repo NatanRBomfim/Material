@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Array com objetos com array</title>
+</head>
+
+<body>
+    <h1>Desafio </h1>
+    <ul id="listaNomeMedia">
+
+    </ul>
+    <script>
+        const lista = document.getElementById("listaNomeMedia")
+
+        let alunos = [
+            { nome: "Natan", notas: [10, 10, 10, 4] },
+            { nome: "Rodrigo", notas: [10, 10, 10, 4] }]
+
+        let linhas = ""
+
+        for (let i = 0; i < alunos.length; i++) {
+            let soma = 0
+            for (let j = 0; j < alunos[i].notas.length; j++) {
+                soma += alunos[i].notas[j]
+            }
+
+            let media = soma / alunos[i].notas.length
+
+            linhas += `<li>Nome: ${alunos[i].nome}, Media: ${media} </li>`
+        }
+        lista.innerHTML += linhas
+    </script>
+</body>
+
+</html>

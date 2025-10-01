@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+
+<body>
+    <h1>Objetos</h1>
+    <script>
+        /*  const carro = {
+             modelo: "Uno",
+             ano: 2023,
+             km: 1000,
+             combustivel: "gasolina",
+             litrosConsumidos: 625
+         }
+         
+         let media = carro.km / carro.litrosConsumidos
+ 
+         document.write(`O carro ${carro.modelo} ${carro.ano}, fez em média ${media} Km/L de ${carro.combustivel}`)
+    */
+
+        const endereco = {
+            logadouro: "Tabajara",
+            numero: 305
+        }
+
+        const pessoa = {
+            nome: "Joao",
+            sobrenome: "Nechell",
+            endereco
+        }
+
+        for(let prop in pessoa){
+            console.log(prop)
+            console.log(pessoa[prop])
+        }
+
+        document.write(`O ${pessoa.nome} mora no endereço ${pessoa.endereco.logadouro} e no numero ${pessoa.endereco.numero}`)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array e Objetos</title>
+</head>
+
+<body>
+
+    <ul id="listaObjetos">
+
+    </ul>
+
+    <script>
+        const lista = document.getElementById("listaObjetos")
+        let pessoa1 = { nome: "Natan", sobrenome: "Bomfim" }
+        let pessoa2 = { nome: "Nicolas", sobrenome: "Robim" }
+        let pessoa3 = { nome: "Jhon", sobrenome: "anjos" }
+        let pessoa4 = { nome: "Carlos", sobrenome: "Mota" }
+
+        const pessoas = [pessoa1, pessoa2, pessoa3, pessoa4]
+        
+        for(let i = 0; i < pessoas.length; i++){
+             lista.innerHTML = lista.innerHTML + `<li>${pessoas[i].nome} ${pessoas[i].sobrenome}</li>`
+        }     
+    </script>
+</body>
+
+</html>
