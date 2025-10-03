@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+
+<body>
+    <input type="number" id="number">
+    <button onclick="mostrarTabuada()">Clique aqui pra exibir a tabuada</button>
+    <button onclick="limparTabuada()">Limpar</button>
+    <div id="output">
+
+    </div>
+
+    <script>
+        const input = document.getElementById("number")
+        const output = document.getElementById("output")
+
+        function mostrarTabuada() {
+            let inputValor = input.value
+            
+            limparTabuada()
+
+            for (let i = 0; i <= 10; i++) {
+                let result = inputValor * i
+                tabuadaHTML += `${inputValor} X ${i}  = ${result} <br>`
+            }
+            output.innerHTML += tabuadaHTML
+
+        }
+
+        function limparTabuada() {
+            output.innerHTML = ""
+            tabuadaHTML = ""
+        }
+    </script>
+</body>
+
+</html>

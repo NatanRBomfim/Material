@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametros</title>
+</head>
+
+<body>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button onclick="somaNumeros()">botao</button>
+    <hr>
+    <div id="output">
+
+    </div>
+    <script>
+        const output = document.getElementById('output')
+        /* const num1 = document.getElementById('num1')
+         const num2 = document.getElementById('num2')
+         
+ 
+         function somaNumeros() {
+             let num1Value = parseInt(num1.value)
+             let num2Value = parseInt(num2.value)
+             soma(num1Value, num2Value)
+         }
+        
+         function soma(num1,num2) {
+             let total = num1 + num2
+             output.innerHTML += `O total da soma é ${total} <br>` 
+         }
+             */
+
+        function soma(n1, n2) {
+            return n1 + n2
+        }
+
+        let resultado = soma(5, 5)
+
+        output.innerHTML += resultado
+    </script>
+</body>
+
+</html>
+
