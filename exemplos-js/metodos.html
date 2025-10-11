@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos</title>
+</head>
+
+<body>
+    <h1>Metodos</h1>
+    <script>
+        const produto = {
+            nome: "Caneta", estoque: 7, comprar: function (qtde) {
+                if (qtde <= this.estoque && qtde > 0 ) {
+                    this.estoque -= qtde
+                    console.log(`Compra realizada! agora tem ${produto.estoque} em estoque`)
+                } else {
+                    console.log(`Não foi possivel comprar, só tem ${this.estoque} em estoque.`)
+                    return null
+                }
+            }
+        }
+
+        produto.comprar(9)
+    </script>
+</body>
+
+</html>

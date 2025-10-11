@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de funções</title>
+</head>
+
+<body>
+    <h1>Funções</h1>
+
+    <script>
+        //function description
+        function exemplo1(nome) {
+            console.log("Olá, " + nome + "eu sou uma function description")
+        }
+
+        //function expression
+
+        const exemplo2 = function (nome) {
+            console.log("Olá, " + nome + "eu sou uma function expression")
+        }
+
+        const arr = [exemplo1, exemplo2, function () { console.log("Eu sou uma function anonima dentro de array executada") }]
+
+        //Function Arrow
+
+        const exemplo3 = (nome) => {
+            console.log("Olá, " + nome + "eu sou uma function arrow")
+        }
+
+        const soma = (n1, n2) => n1 + n2
+        console.log(soma(7, 3))
+
+        const multiplica = n => n * 2
+        console.log(multiplica(6))
+    </script>
+</body>
+
+</html>

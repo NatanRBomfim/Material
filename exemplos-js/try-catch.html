@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch</title>
+</head>
+
+<body>
+    <h1>try ... catch()</h1>
+    <div id="output"></div>
+
+    <script>
+        const obj = { nome: "Natan", email: "exemplo@exemplo.com" }
+
+        try {
+            const output = document.getElementById("output").innerHTML = `O nome é ${obj.nome} e o email é ${obj.email}`
+        }
+        catch (e) {
+            alert("Aviso!: " + e.message)
+        }
+      
+    </script>
+    
+    <script src="areas.js"></script>
+
+    <script>
+        try{
+             console.log(calcularAreaRetangulo(2, "huhu"))
+        }
+        catch (err){
+            alert("Aviso: " + err.message)
+        }
+        alert("Fim do programa")
+       
+    </script>
+</body>
+
+</html>
