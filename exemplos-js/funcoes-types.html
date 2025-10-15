@@ -13,22 +13,25 @@
     <script>
         //function description
         function exemplo1(nome) {
-            console.log("Olá, " + nome + "eu sou uma function description")
+            console.log("Olá, " + nome + " eu sou uma function description")
         }
+        exemplo1("Natan")
 
         //function expression
 
         const exemplo2 = function (nome) {
-            console.log("Olá, " + nome + "eu sou uma function expression")
+            console.log("Olá, " + nome + " eu sou uma function expression")
         }
+        exemplo2("Natan")
 
         const arr = [exemplo1, exemplo2, function () { console.log("Eu sou uma function anonima dentro de array executada") }]
-
+        console.log(arr[2]())
         //Function Arrow
 
         const exemplo3 = (nome) => {
-            console.log("Olá, " + nome + "eu sou uma function arrow")
+            console.log("Olá, " + nome + " eu sou uma function arrow")
         }
+        exemplo3("Natan")
 
         const soma = (n1, n2) => n1 + n2
         console.log(soma(7, 3))
