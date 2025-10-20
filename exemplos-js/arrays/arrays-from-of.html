@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays From e Of</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam obcaecati amet ea, ad minus vero illum eveniet exercitationem unde distinctio iure accusamus quas cupiditate architecto soluta, perspiciatis repudiandae. Minima fugit, odio, amet deserunt assumenda similique alias iure culpa repellendus obcaecati ad possimus deleniti eius praesentium rem nam sunt dignissimos corrupti.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam obcaecati amet ea, ad minus vero illum eveniet exercitationem unde distinctio iure accusamus quas cupiditate architecto soluta, perspiciatis repudiandae. Minima fugit, odio, amet deserunt assumenda similique alias iure culpa repellendus obcaecati ad possimus deleniti eius praesentium rem nam sunt dignissimos corrupti.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam obcaecati amet ea, ad minus vero illum eveniet exercitationem unde distinctio iure accusamus quas cupiditate architecto soluta, perspiciatis repudiandae. Minima fugit, odio, amet deserunt assumenda similique alias iure culpa repellendus obcaecati ad possimus deleniti eius praesentium rem nam sunt dignissimos corrupti.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam obcaecati amet ea, ad minus vero illum eveniet exercitationem unde distinctio iure accusamus quas cupiditate architecto soluta, perspiciatis repudiandae. Minima fugit, odio, amet deserunt assumenda similique alias iure culpa repellendus obcaecati ad possimus deleniti eius praesentium rem nam sunt dignissimos corrupti.</p>
+    
+    <script>
+        let paragrafos = document.querySelectorAll("p")
+
+        const arr = new Array(3)
+        const arr2 = Array.of(3)
+       
+        console.log(arr)
+        console.log(arr2)
+
+        paragrafos = Array.from(paragrafos) // permite tornar uma array falsa para uma array real
+
+        // paragrafos.forEach(function(p, i){
+        //p.textContent = `${++i} - ${p.textContent}`
+        //})
+
+        paragrafos.map(function(p, i){
+        p.textContent = `${++i} - ${p.textContent}`
+        
+        })
+
+        
+    </script>
+</body>
+</html>
