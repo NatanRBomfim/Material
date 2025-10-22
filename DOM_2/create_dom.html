@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigate DOM</title>
+
+    <style>
+        .container2 {
+            background-color: rgb(190, 190, 190);
+            padding: 24px;
+        }
+
+        .container2 p {
+            border: 2px solid red;
+            padding: 24px
+        }
+    </style>
+</head>
+
+<body>
+    <h1>teste DOM</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, eos?</p>
+    <p>Lorem <a href="#">Link</a> teste</p>
+
+    <div class="container2">
+        <p>paragrafo 1</p>
+        <p>paragrafo 2</p>
+        <p>paragrafo 3</p>
+    </div>
+
+
+    <div class="container">
+        <h2>lista</h2>
+        <ul class="list">
+            <li>item 1</li>
+            <li>item 2
+                <ul>
+                    <li>item 2.a</li>
+                    <li>item 2.b</li>
+                    <li>item 2.c</li>
+                    <li><!-- Olaa !--></li>
+                </ul>
+            </li>
+            <li>item <a href="#">link</a></li>
+
+        </ul>
+    </div>
+    <script>
+        //Maneira complexa
+
+        const title = document.createElement("h1")
+        const atribute = document.createAttribute("id")
+        atribute.value = "title1"
+
+        title.setAttributeNode(atribute)
+
+        const text = document.createTextNode("criar nós no DOM através do createTextNode")
+
+        title.appendChild(text)
+
+        //  document.querySelector(".container").appendChild(title)
+
+        console.log(title)
+
+        //Maneira rapida
+
+        const paragrafo = document.createElement("p")
+
+        paragrafo.setAttribute("class", "teste")
+        paragrafo.setAttribute("style", "color: blue")
+        paragrafo.textContent = "criar nós no DOM através do textContent"
+
+        // document.querySelector(".container").appendChild(paragrafo)
+        document.querySelector(".container").prepend(title)
+
+
+        //utilizando inserBefore
+        const container = document.querySelector(".container")
+        const h2 = document.querySelector("h2")
+
+        container.insertBefore(paragrafo, h2 )
+        //container.insertBefore(title, container.firstChild) // maneira de inserir no inicio para IE
+
+
+        //mover um elemento de um nó sem mexer na posição original
+        let sublevel = document.querySelector("ul ul")
+        sublevel = sublevel.cloneNode(true)
+
+        container.insertBefore(sublevel, h2.nextElementSibling)
+
+        const segundoParagrafo = container.firstChild.nextElementSibling
+        console.log(segundoParagrafo)
+
+        const span = document.createElement("span")
+        span.textContent = "Span Dinamica"
+
+        segundoParagrafo.before(span)
+        //segundoParagrafo.after(span, " | segundo parametro")
+
+        const container2 = document.querySelector(".container2")
+        container2.insertAdjacentHTML("beforebegin", "<b>beforebegin<b>")
+        container2.insertAdjacentHTML("afterbegin", "<b>afterbegin<b>")
+        container2.insertAdjacentHTML("beforeend", "<b>beforeend<b>")
+        container2.insertAdjacentHTML("afterend", "<b>afterend<b>")
+
+        //Metodos para remover um nó
+
+        const lista = document.querySelector(".list")
+
+        //lista.remove()
+        lista.parentElement.removeChild(lista)
+
+        //Metodo replace, substitui um elemento pelo outro
+
+        const parent = document.body
+        const newChild = document.querySelector("h2").cloneNode(true)
+        const oldChild = document.querySelector("h1")
+
+       // parent.replaceChild(newChild, oldChild)
+    </script>
+</body>
+
+</html>
