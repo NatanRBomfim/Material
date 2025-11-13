@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+    <title> pagina de exemplo de DOM </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel">
+    <meta name="description" content="descrição bacanuda">
+    <meta name="keywords" content="html5, tecnologia">
+
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <div id="principal">
+        <header class="hero">
+
+            <div class="hero-content">
+                <h1>Curso Javascript Completo</h1>
+                <h2>insira a data do seu nascimento</h2>
+                <div id="newsletterForm">
+                    <input type="date" id="txtnascimento">
+                </div>
+                <div id="quantoFalta">
+
+
+                </div>
+            </div>
+        </header>
+
+    </div>
+
+    <script src="js/birthday.js"></script>
+    <script type="text/javascript">
+        document.getElementById("txtnascimento").addEventListener("change", checkBirthday)
+        function checkBirthday(e) {
+            console.log(e.target.value)
+            const container = document.getElementById("quantoFalta")
+            const arr = e.target.value.split("-")
+            console.log(arr)
+            console.log(arr.length)
+            if (arr.length > 2) {
+
+                container.innerHTML = `
+            <p>Falta(m) ${quantoFaltaPara(arr[1],arr[2])} dias para o seu aniversario</p>
+        `
+            } else {
+                container.textContent = "  "
+            }
+        }
+    </script>
+
+</body>
+
+</html>

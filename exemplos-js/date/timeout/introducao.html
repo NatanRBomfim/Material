@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+
+        let n = 0
+        let dataInicio = Date.now()
+
+        setTimeout(function () {
+            console.log("evento disparado dps de 2000ms")
+
+            let d = document.querySelector("div")
+            for (let i = 0; i < 1000; i++) {
+
+                d.innerHTML += ` i: ${i} -- `
+            }
+            let dataFinal = Date.now()
+            console.log(dataFinal - dataInicio)
+        }, 2000)
+
+        const intervalo = setInterval(() => {
+            console.log(n++)
+            if (n >= 10) {
+                clearInterval(intervalo)
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
