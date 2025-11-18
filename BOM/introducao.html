@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Pagina 1</h1>
+
+    <a href="history.html">Link para o History</a>
+
+    <button>abre com metodo open</button>
+
+    <script>
+        var teste = "variavel de introducao.html"
+        console.log(opener)
+
+        function teste2(){
+          console.log("teste2 chamado")
+        }
+    
+        document.querySelector("button").addEventListener("click", function () {
+            window.open("history.html", "nome-janela", "width=800,height=400")
+        })
+    </script>
+</body>
+
+</html>

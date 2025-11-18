@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>History</h1>
+
+    <button id="btnBack">Voltar</button>
+    <button id="btnForward">Avançar</button>
+    <button id="btnClose">Fechar metodo open</button>
+
+    <a href="https://github.com/NatanRBomfim">GitHub</a>
+
+    <img src="https://www.infoworld.com/wp-content/uploads/2025/09/2263137-0-59682900-1757000713-shutterstock_1361674454-100939444-orig.jpg?quality=50&strip=all"
+        alt="JavaScript">
+
+    <script>
+
+        console.log(opener)
+
+        if (opener) {
+            opener.teste2()
+        }
+        document.getElementById("btnBack").addEventListener("click", function () {
+            history.back()
+        })
+
+        document.getElementById("btnForward").addEventListener("click", function () {
+            history.forward()
+        })
+
+        document.getElementById("btnClose").addEventListener("click", function () {
+            close()
+        })
+
+        window.addEventListener("load", function () {
+            console.log("load, carregado após todo o conteudo disponivel")
+        })
+
+        window.addEventListener("DOMContentLoaded", function () {
+            console.log("DOMContentLoaded, carregado após todo o conteudo DOM disponivel (Nós, parentElements)")
+        })
+
+        window.addEventListener("scroll", function(){
+            console.log("scroll", pageYOffset)
+        })
+
+        window.addEventListener("resize", function(){
+            console.log("resize", innerWidth, innerHeight)
+        })
+    </script>
+</body>
+
+</html>
