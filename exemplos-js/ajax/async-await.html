@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+
+<body>
+    <ul id="lista"></ul>
+    <script>
+        console.log("Inicio programa")
+        function mostrarDados(dados) {
+            const lista = document.querySelector("#lista")
+            let resultado = ""
+            dados.forEach(dado => {
+                resultado += `<li>Nome: ${dado.nome} Sobrenome: ${dado.sobrenome}</li>`
+                lista.innerHTML = resultado
+            });
+        }
+
+
+        async function buscaDados() {
+            console.log("Inicio do buscaDados")
+            try {
+                const resposta = await fetch("./dados.json")
+                if (!resposta.ok) {
+                    throw Error("Nao foi possivel carregar os dados")
+                }
+                const dados = await resposta.json()
+                mostrarDados(dados)
+            }
+            catch (e) {
+                console.error("Erro", e)
+            }
+            console.log("Fim do buscaDados")
+        }
+
+        buscaDados()
+        console.log("Fim programa")
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+
+<body>
+    <ul id="lista"></ul>
+    <script>
+        function mostrarDados(dados) {
+            const lista = document.querySelector("#lista")
+            let resultado = ""
+            dados.forEach(dado => {
+                resultado += `<li>Nome: ${dado.nome} Sobrenome: ${dado.sobrenome}</li>`
+                lista.innerHTML = resultado
+            });
+        }
+
+        fetch("./dados.json")
+            .then(resposta => {
+                if (!(resposta.ok)) {
+                    throw Error("Nao foi possivel carregar os dados.")
+                }
+                return resposta.json()
+            }).then(dados => {
+                console.log(dados)
+                mostrarDados(dados)
+            }).catch(err => console.error("Erro:", err))
+
+
+    </script>
+</body>
+
+</html>
