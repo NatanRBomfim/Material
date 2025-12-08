@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAKE API</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        tr,
+        td {
+            padding: .4em;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>UserId</th>
+                    <th>Id</th>
+                    <th>Titulo</th>
+                    <th>Body</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <br>
+        <form action="" method="post">
+            <label for="title">Titulo:</label><br>
+            <input type="text" name="title" id="title">
+            <br>
+            <label for="body">Mensagem:</label><br>
+            <textarea name="body" id="body" style="width: 300px; height: 150px;"></textarea>
+            <br>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <script>
+        const titleForm = document.getElementById("title")
+        const bodyForm = document.getElementById("body")
+
+        async function buscaPOSTDados(id) {
+            try {
+                const resposta = await fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+                if (!resposta.ok) {
+                    throw Error("Erro na requisição")
+                }
+                const dados = await resposta.json()
+                mostrarDados(dados)
+            } catch (e) {
+                console.log("Erro:", e)
+            }
+        }
+
+        function mostrarDados(dados) {
+            if (dados.length) {
+                for (let i = 0; i < dados.length; i++) {
+                    document.querySelector("tbody").innerHTML +=
+                        `<tr>
+                    <td>${dados[i].userId}</td>
+                    <td>${dados[i].id}</td>
+                    <td>${dados[i].title}</td>
+                    <td>${dados[i].body}</td>
+                    </tr>`
+                }
+            } else {
+                document.querySelector("tbody").innerHTML +=
+                    `<tr>
+                    <td>${dados.userId}</td>
+                    <td>${dados.id}</td>
+                    <td>${dados.title}</td>
+                    <td>${dados.body}</td>
+                    </tr>`
+            }
+        }
+
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault()
+
+            cadastrarPost(1)
+        })
+
+        async function cadastrarPost(userId) {
+            try {
+                const resposta = await fetch('https://jsonplaceholder.typicode.com/posts', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        title: titleForm.value,
+                        body: bodyForm.value,
+                        userId
+                    }),
+                    headers: {
+                        'Content-type': 'application/json; charset=UTF-8',
+                    },
+                })
+                const dados = await resposta.json()
+                mostrarDados(dados)
+            } catch (e) {
+                alert("Erro:", e)
+            }
+        }
+        buscaPOSTDados(1)
+    </script>
+</body>
+
+</html>
